@@ -44,17 +44,20 @@
             align-items: center;
             gap: 8px;
         }
-        .btn-download {
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .nav-link {
             text-decoration: none;
+            color: var(--text-muted);
+            font-size: 14px;
             font-weight: 600;
             transition: 0.3s;
         }
-        .btn-download:hover { background: var(--primary-dark); }
-
+        .nav-link:hover { color: var(--primary); }
+        
         .hero {
             text-align: center;
             padding: 100px 10%;
@@ -73,7 +76,25 @@
             max-width: 700px;
             margin: 0 auto 40px;
         }
-
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--primary-dark); }
+        
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,14 +157,21 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><span>V</span> VoiceFlow</div>
-        <a href="#" class="btn-download">Install Extension</a>
+        <div class="logo"><span style="color: var(--primary); font-size: 28px;">V</span> VoiceFlow</div>
+        <div class="nav-links">
+            <a href="https://naimurrahman04.github.io/voiceflow-site/privacy.html" class="nav-link">Privacy</a>
+            <a href="https://naimurrahman04.github.io/voiceflow-site/terms.html" class="nav-link">Terms</a>
+            <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 14px;">Get Early Access</a>
+        </div>
     </nav>
 
     <section class="hero">
         <h1>Read the Web with <br><span style="color: var(--primary);">Natural AI Voices</span></h1>
         <p>Stop reading and start listening. VoiceFlow transforms any webpage into a professional audiobook with neural-grade human voices.</p>
-        <a href="#" class="btn-download" style="padding: 15px 30px; font-size: 18px;">Get it for Free (100 Days)</a>
+        <div class="cta-container">
+            <a href="#pricing" class="btn-primary">View Pro Plans</a>
+            <a href="mailto:naimurrahman04@gmail.com" class="btn-primary" style="background: white; color: var(--primary); border: 1px solid var(--primary);">Contact Support</a>
+        </div>
     </section>
 
     <section class="features">
@@ -161,13 +189,13 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <h2>Simple Pricing</h2>
         <div class="price-card">
             <h3>Pro Plan</h3>
             <div class="price-tag">$2 <span>/ month</span></div>
             <p>Unlimited Neural Voices<br>Lifetime Word Tracking<br>Premium Support</p>
-            <a href="#" class="btn-download" style="display: block; margin-top: 20px;">Upgrade Now</a>
+            <a href="mailto:naimurrahman04@gmail.com?subject=VoiceFlow Pro Access" class="btn-primary" style="display: block; margin-top: 20px;">Request Access</a>
         </div>
     </section>
 
